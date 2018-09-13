@@ -945,4 +945,72 @@ object {
   display: block;
 }
 
+header {
+  display: grid;
+  grid-auto-rows: min-content;
+  grid-template-columns: [full-start] minmax(1em, 1fr) [main-start] minmax(0, 37.5em) [half] minmax(0, 37.5em) [main-end] minmax(1em, 1fr) [full-end];
+}
+header .top-bar {
+  grid-column: full;
+  background: #000;
+  grid-row: 1 / 2;
+}
+header .superheader {
+  grid-row: 1 / 2;
+  grid-column: main;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+@media screen and (max-width: 768px) {
+  header .superheader {
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+header .superheader p {
+  color: #fff;
+  font-size: 14px;
+  padding: 5px 0;
+  margin: 0;
+  text-align: center;
+}
+header .superheader .social {
+  display: flex;
+  width: 70px;
+  justify-content: space-between;
+}
+@media screen and (max-width: 768px) {
+  header .superheader .social {
+    margin: 0 auto;
+  }
+}
+header .superheader .social i {
+  color: #fff;
+  font-size: 1em;
+  font-family: 'FontAwesome';
+  font-style: normal;
+  font-weight: 100;
+}
+header .navbar {
+  grid-column: full;
+  grid-row: 3 / 4;
+  background-color: #135689;
+  height: 45px;
+}
+@media screen and (max-width: 768px) {
+  header .navbar {
+    display: none;
+  }
+}
+header nav#site-navigation {
+  grid-column: main;
+  grid-row: 3 / 4;
+}
+@media screen and (max-width: 768px) {
+  header nav#site-navigation {
+    grid-column: full;
+  }
+}
+
 /*# sourceMappingURL=style-human.css.map */
