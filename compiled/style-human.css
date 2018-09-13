@@ -644,7 +644,7 @@ a:hover, a:active {
   transition: all 300ms ease-in-out;
 }
 #nav-toggle span {
-  left: 15px;
+  left: 17px;
 }
 #nav-toggle span:before {
   top: -10px;
@@ -682,6 +682,11 @@ a:hover, a:active {
   margin: 0;
   padding-left: 0;
 }
+@media screen and (max-width: 768px) {
+  .main-navigation ul {
+    background: #135689;
+  }
+}
 .main-navigation ul ul {
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
   float: left;
@@ -689,10 +694,17 @@ a:hover, a:active {
   top: 100%;
   left: -999em;
   z-index: 99999;
+  background: #bada55;
+}
+@media screen and (max-width: 768px) {
+  .main-navigation ul ul {
+    width: 100%;
+  }
 }
 .main-navigation ul ul ul {
   left: -999em;
   top: 0;
+  background: #BADA55;
 }
 .main-navigation ul ul li:hover > ul, .main-navigation ul ul li.focus > ul {
   left: 100%;
@@ -700,17 +712,30 @@ a:hover, a:active {
 .main-navigation ul ul a {
   width: 200px;
 }
+@media screen and (max-width: 768px) {
+  .main-navigation ul ul a {
+    width: 100%;
+  }
+}
 .main-navigation ul li:hover > ul,
 .main-navigation ul li.focus > ul {
   left: auto;
 }
 .main-navigation li {
-  float: left;
   position: relative;
 }
 .main-navigation a {
   display: block;
   text-decoration: none;
+  color: #fff;
+}
+@media screen and (max-width: 768px) {
+  .main-navigation a {
+    padding: 10px 0 10px 15px;
+  }
+}
+.main-navigation a:hover {
+  background: #082b46;
 }
 
 .main-navigation.toggled ul {
