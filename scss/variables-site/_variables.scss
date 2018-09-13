@@ -1,0 +1,95 @@
+//Colors
+
+$blue: #135689;
+$dkblue: #082b46;
+
+$color__background-body: #fff;
+$color__background-screen: #f1f1f1;
+$color__background-hr: #ccc;
+$color__background-button: #e6e6e6;
+$color__background-pre: #eee;
+$color__background-ins: #fff9c0;
+
+$color__text-screen: #21759b;
+$color__text-input: #666;
+$color__text-input-focus: #111;
+$color__link: royalblue;
+$color__link-visited: purple;
+$color__link-hover: midnightblue;
+$color__text-main: #404040;
+
+$color__border-button: #ccc #ccc #bbb;
+$color__border-button-hover: #ccc #bbb #aaa;
+$color__border-button-focus: #aaa #bbb #bbb;
+$color__border-input: #ccc;
+$color__border-abbr: #666;
+
+
+//Typography
+$font__main: 'Nanum Gothic', sans-serif;
+$font__sans: 'Nanum Gothic', sans-serif;
+$font__serif: 'Noto Serif KR', sans-serif;
+$font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+$font__pre: "Courier 10 Pitch", Courier, monospace;
+$font__line-height-body: 1.5;
+$font__line-height-pre: 1.6;
+
+
+//Structure
+$size__site-main: 100%;
+$size__site-sidebar: 25%;
+
+
+
+//Breakpoints
+// Make sure the mobile breakpoint matches the style override in js/burgertime.js
+$desktop: 87.5em; //1400px
+$laptop:  75em; //1200px
+$tabletH: 64em; //1024px
+$tabletV: 48em; //768px
+$mobileH: 37.5em; //600px
+$mobileV: 25em; //400px
+
+
+
+//Media Queries
+$desktop-width: $desktop;
+$laptop-width: $laptop;
+$tabletH-width: $tabletH;
+$tabletV-width: $tabletV;
+$mobileH-width: $mobileH;
+$mobileV-width: $mobileV;  
+
+
+//Columns
+$columns: (
+	1: 100%,
+	2: 50%,
+	3: 33.33%,
+	4: 25%,
+	5: 20%,
+	6: 16.66%,
+	7: 14.28%,
+	8: 12.5%,
+	9: 11.11%
+);
+$columns__margin: 3.8%;
+
+
+//Navigation
+$color__burger: #fff;
+$color__burger-bkgnd: $blue;
+$size__burger-bkgnd: 70px;
+$color__nav-font: #ffffff;
+$color__link-bkgnd-hover: $dkblue;
+$color__submenu_bkgnd: $blue;
+$color__top_level_menu_bkgnd: $blue;
+
+
+
+//Flex Grid Demo 
+$demoMain: rgba(51, 153, 204,.2);
+$demoMainDark: rgba(51, 153, 204,.6);
+$demoBorder: #33cccc;
+$demoHolly: rgba(102, 51, 255, 0.1);
+$demoHollyDark: rgba(102, 51, 255, 0.25);
