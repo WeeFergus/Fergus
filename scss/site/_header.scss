@@ -56,7 +56,6 @@ header {
 		grid-column: full;
 		grid-row: 3 / 4;
 		background-color: #135689;
-		height: 45px; 
 		
 		@media screen and (max-width: 768px) {
 			display: none;

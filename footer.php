@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Fergus2
+ * @package fergus
  */
 
 ?>
@@ -14,19 +14,28 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'fergus2' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'fergus2' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'fergus2' ), 'fergus2', '<a href="http://underscores.me/">Underscores.me</a>' );
-				?>
-		</div><!-- .site-info -->
+		<div class="wrapper">
+			<div class="site-info">
+				<div class="third">
+				</div>
+				<div class="third">
+				</div>
+				<div class="third">
+				</div>
+
+				<!--<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'fergus' ) ); ?>">
+					<?php
+					/* translators: %s: CMS name, i.e. WordPress. */
+					printf( esc_html__( 'Proudly powered by %s', 'fergus' ), 'WordPress' );
+					?>
+				</a>
+				<span class="sep"> | </span>
+					<?php
+					/* translators: 1: Theme name, 2: Theme author. */
+					printf( esc_html__( 'Theme: %1$s by %2$s.', 'fergus' ), 'fergus', '<a href="http://underscores.me/">Pete Hudack</a>' );
+					?>-->
+			</div><!-- .site-info -->
+		</div><!--wrapper-->	
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

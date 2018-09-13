@@ -70,7 +70,9 @@
 	}
 }
 
-/* Small menu. */
+
+
+
 .menu-toggle {
 	display: block;
 }
@@ -80,13 +82,27 @@
 	flex-direction: column;
 }
 
-@media screen and (min-width: 37.5em) {
+@media screen and (min-width: 768px) {
 	.menu-toggle {
 		display: none;
 	}
 	.main-navigation ul {
 		display: flex;
 		justify-content: space-around;
+		
+		li {
+			padding: 0;
+			
+			a {
+				color: #fff;
+				text-decoration: none;
+				padding: 15px 25px;
+				
+				&:hover {
+				background: $dkblue;
+				}
+			}
+		}
 	}
 }
 
