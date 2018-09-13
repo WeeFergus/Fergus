@@ -8,33 +8,33 @@
  *
  * @link https://developer.wordpress.org/themes/functionality/custom-headers/
  *
- * @package Fergus2
+ * @package fergus
  */
 
 /**
  * Set up the WordPress core custom header feature.
  *
- * @uses fergus2_header_style()
+ * @uses fergus_header_style()
  */
-function fergus2_custom_header_setup() {
-	add_theme_support( 'custom-header', apply_filters( 'fergus2_custom_header_args', array(
+function fergus_custom_header_setup() {
+	add_theme_support( 'custom-header', apply_filters( 'fergus_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => '000000',
 		'width'                  => 1000,
 		'height'                 => 250,
 		'flex-height'            => true,
-		'wp-head-callback'       => 'fergus2_header_style',
+		'wp-head-callback'       => 'fergus_header_style',
 	) ) );
 }
-add_action( 'after_setup_theme', 'fergus2_custom_header_setup' );
+add_action( 'after_setup_theme', 'fergus_custom_header_setup' );
 
-if ( ! function_exists( 'fergus2_header_style' ) ) :
+if ( ! function_exists( 'fergus_header_style' ) ) :
 	/**
 	 * Styles the header image and text displayed on the blog.
 	 *
-	 * @see fergus2_custom_header_setup().
+	 * @see fergus_custom_header_setup().
 	 */
-	function fergus2_header_style() {
+	function fergus_header_style() {
 		$header_text_color = get_header_textcolor();
 
 		/*

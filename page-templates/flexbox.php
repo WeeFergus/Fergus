@@ -2,7 +2,7 @@
 /**
  * Template Name: Flexbox
  *
- * @package blimey
+ * @package fergus
  */
  
 get_header(); ?>

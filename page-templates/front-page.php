@@ -2,7 +2,7 @@
 /**
  * Template Name: Home Page
  *
- * @package blimey
+ * @package fergus
  */
  
 get_header(); ?>
