@@ -619,6 +619,57 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
+#nav-toggle {
+  position: absolute;
+  right: 25px;
+  top: 75px;
+  cursor: pointer;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  background: #082b46;
+}
+#nav-toggle span,
+#nav-toggle span:before,
+#nav-toggle span:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 3px;
+  width: 35px;
+  background: #fff;
+  position: absolute;
+  display: block;
+  content: '';
+  transition: all 300ms ease-in-out;
+}
+#nav-toggle span {
+  left: 15px;
+}
+#nav-toggle span:before {
+  top: -10px;
+}
+#nav-toggle span:after {
+  bottom: -10px;
+}
+#nav-toggle.active span {
+  background-color: transparent;
+}
+#nav-toggle.active span:before, #nav-toggle.active span:after {
+  top: 0;
+}
+#nav-toggle.active span:before {
+  transform: rotate(45deg);
+}
+#nav-toggle.active span:after {
+  transform: rotate(-45deg);
+}
+@media screen and (min-width: 768px) {
+  #nav-toggle {
+    display: none;
+  }
+}
+
 .main-navigation {
   clear: both;
   display: block;
@@ -660,53 +711,6 @@ a:hover, a:active {
 .main-navigation a {
   display: block;
   text-decoration: none;
-}
-
-#nav-toggle {
-  position: absolute;
-  right: 50px;
-  top: 50px;
-  cursor: pointer;
-  padding: 10px 35px 16px 0px;
-  border: 1px solid red;
-  display: block;
-  background: #082b46;
-}
-#nav-toggle span,
-#nav-toggle span:before,
-#nav-toggle span:after {
-  cursor: pointer;
-  border-radius: 1px;
-  height: 3px;
-  width: 35px;
-  background: #fff;
-  position: absolute;
-  display: block;
-  content: '';
-  transition: all 300ms ease-in-out;
-}
-#nav-toggle span:before {
-  top: -10px;
-}
-#nav-toggle span:after {
-  bottom: -10px;
-}
-#nav-toggle.active span {
-  background-color: transparent;
-}
-#nav-toggle.active span:before, #nav-toggle.active span:after {
-  top: 0;
-}
-#nav-toggle.active span:before {
-  transform: rotate(45deg);
-}
-#nav-toggle.active span:after {
-  transform: rotate(-45deg);
-}
-
-/***************************************************/
-.menu-toggle {
-  display: block;
 }
 
 .main-navigation.toggled ul {
