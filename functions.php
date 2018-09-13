@@ -126,6 +126,10 @@ function fergus2_scripts() {
 
 	wp_enqueue_script( 'fergus2-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 	
+	wp_enqueue_script('fergus-fire-up-jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js', array(), null, true);
+
+	wp_enqueue_script( 'fergus-burgertime', get_template_directory_uri() . '/js/burgertime.js', array(), '20151215', true );
+	
 	wp_enqueue_style( 'load-fa', 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' );
 	
 	wp_enqueue_style( 'load-fonts', 'https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700|Noto+Serif+KR:400,700' );

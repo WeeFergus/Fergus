@@ -71,7 +71,59 @@
 }
 
 
+ 
 
+	#nav-toggle {
+		position: absolute;
+		right: 50px;
+		top: 50px;
+		cursor: pointer;
+		padding: 10px 35px 16px 0px;
+		border: 1px solid red;
+		display: block;
+		background: $dkblue;
+		
+		span,
+		span:before,
+		span:after {
+			cursor: pointer;
+			border-radius: 1px;
+			height: 3px;
+			width: 35px;
+			background: $color__burger;
+			position: absolute;
+			display: block;
+			content: '';
+			transition: all 300ms ease-in-out;
+		}
+	
+		span:before {
+			top: -10px;
+		}
+	
+		span:after {
+			bottom: -10px;
+		}
+	
+		&.active span {
+			background-color: transparent;
+		
+			&:before,
+			&:after {
+				top: 0;
+			}
+		
+			&:before {
+				transform: rotate(45deg);
+			}
+			
+			&:after {
+				transform: rotate(-45deg);
+			}
+		}
+	}
+
+/***************************************************/
 
 .menu-toggle {
 	display: block;
