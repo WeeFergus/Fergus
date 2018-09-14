@@ -27,3 +27,63 @@
 @mixin column-width($numberColumns: 3) {
 	width: map-get( $columns, $numberColumns ) - ( ( $columns__margin * ( $numberColumns - 1 ) ) / $numberColumns );
 }
+
+
+//Media Queries
+@mixin min-desktop { @media (min-width: #{$desktop-width}){ @content;}}
+@mixin min-laptop  { @media (min-width: #{$laptop-width }){ @content;}}
+@mixin min-tabletH { @media (min-width: #{$tabletH-width}){ @content;}}
+@mixin min-tabletV { @media (min-width: #{$tabletV-width}){ @content;}}
+@mixin min-mobileH { @media (min-width: #{$mobileH-width}){ @content;}}
+@mixin min-mobileV { @media (min-width: #{$mobileV-width}){ @content;}}
+
+@mixin max-desktop { @media (max-width: #{$desktop-width}){ @content;}}
+@mixin max-laptop  { @media (max-width: #{$laptop-width }){ @content;}}
+@mixin max-tabletH { @media (max-width: #{$tabletH-width}){ @content;}}
+@mixin max-tabletV { @media (max-width: #{$tabletV-width}){ @content;}}
+@mixin max-mobileH { @media (max-width: #{$mobileH-width}){ @content;}}
+@mixin max-mobileV { @media (max-width: #{$mobileV-width}){ @content;}}
+
+@mixin min-nav-breakpoint {@media (min-width: #{$nav-breakpoint}){ @content;}}
+@mixin max-nav-breakpoint {@media (max-width: #{$nav-breakpoint}){ @content;}}
+
+
+//Transitions
+@mixin general-transition {
+    @include transition(all 0.35s ease-in-out);
+}
+
+@mixin fast-transition() {
+    @include transition(all .15s ease-in-out);
+}
+
+@mixin slow-transition() {
+    @include transition(all .75s ease-in-out);
+}
+
+
+//Responsive Background Images
+@mixin cover-background($img-url){
+	.heroResponsive #heroPhoto { 
+		width: 100%; 
+		display: inline-block; 
+		vertical-align: middle; 
+ 		background-size: 100%; 
+		background-position: 50% 50%; 
+		background-repeat: no-repeat;
+		background-image: url($img-url);
+		}
+		@media screen and (max-width: 500px) {
+			.heroResponsive #heroPhoto {
+				height: 225px;
+				background-size: cover;
+				background-position: top;
+				padding: 0
+			}
+		}
+
+	.heroResponsive #heroPhoto .inner { 
+		padding-top: 41.2%;  
+		display: block; height: 0; 
+		}
+	}

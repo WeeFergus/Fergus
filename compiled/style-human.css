@@ -628,7 +628,7 @@ a:hover, a:active {
   height: 70px;
   display: flex;
   align-items: center;
-  background: #082b46;
+  background: #135689;
 }
 #nav-toggle span,
 #nav-toggle span:before,
@@ -664,7 +664,7 @@ a:hover, a:active {
 #nav-toggle.active span:after {
   transform: rotate(-45deg);
 }
-@media screen and (min-width: 768px) {
+@media (min-width: 37.5em) {
   #nav-toggle {
     display: none;
   }
@@ -682,7 +682,7 @@ a:hover, a:active {
   margin: 0;
   padding-left: 0;
 }
-@media screen and (max-width: 768px) {
+@media (max-width: 37.5em) {
   .main-navigation ul {
     background: #135689;
   }
@@ -696,7 +696,7 @@ a:hover, a:active {
   z-index: 99999;
   background: #bada55;
 }
-@media screen and (max-width: 768px) {
+@media (max-width: 37.5em) {
   .main-navigation ul ul {
     width: 100%;
   }
@@ -710,9 +710,10 @@ a:hover, a:active {
   left: 100%;
 }
 .main-navigation ul ul a {
+  color: #fff;
   width: 200px;
 }
-@media screen and (max-width: 768px) {
+@media (max-width: 37.5em) {
   .main-navigation ul ul a {
     width: 100%;
   }
@@ -729,7 +730,7 @@ a:hover, a:active {
   text-decoration: none;
   color: #fff;
 }
-@media screen and (max-width: 768px) {
+@media (max-width: 37.5em) {
   .main-navigation a {
     padding: 10px 0 10px 15px;
   }
@@ -743,7 +744,7 @@ a:hover, a:active {
   flex-direction: column;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 37.5em) {
   .menu-toggle {
     display: none;
   }
@@ -1044,7 +1045,7 @@ header .superheader {
   justify-content: space-between;
   flex-direction: row;
 }
-@media screen and (max-width: 768px) {
+@media (max-width: 37.5em) {
   header .superheader {
     justify-content: center;
     flex-direction: column;
@@ -1062,7 +1063,7 @@ header .superheader .social {
   width: 70px;
   justify-content: space-between;
 }
-@media screen and (max-width: 768px) {
+@media (max-width: 37.5em) {
   header .superheader .social {
     margin: 0 auto;
   }
@@ -1079,7 +1080,7 @@ header .navbar {
   grid-row: 3 / 4;
   background-color: #135689;
 }
-@media screen and (max-width: 768px) {
+@media (max-width: 37.5em) {
   header .navbar {
     display: none;
   }
@@ -1088,10 +1089,123 @@ header nav#site-navigation {
   grid-column: main;
   grid-row: 3 / 4;
 }
-@media screen and (max-width: 768px) {
+@media (max-width: 37.5em) {
   header nav#site-navigation {
     grid-column: full;
   }
+}
+
+section.gdpr {
+  display: grid;
+  grid-auto-rows: min-content;
+  grid-template-columns: [full-start] minmax(1em, 1fr) [main-start] minmax(0, 37.5em) [half] minmax(0, 37.5em) [main-end] minmax(1em, 1fr) [full-end];
+}
+section.gdpr > * {
+  grid-column: main;
+}
+section.gdpr pre {
+  margin-bottom: 100px;
+}
+
+section.accord {
+  display: grid;
+  grid-auto-rows: min-content;
+  grid-template-columns: [full-start] minmax(1em, 1fr) [main-start] minmax(0, 37.5em) [half] minmax(0, 37.5em) [main-end] minmax(1em, 1fr) [full-end];
+}
+section.accord #accordion {
+  grid-column: main;
+  margin-top: 50px;
+}
+section.accord #accordion .accordion {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-bottom: 1px solid #999;
+}
+section.accord #accordion .accordion p.subhead {
+  font-size: 20px;
+  line-height: 31px;
+  font-weight: 400;
+}
+section.accord #accordion .accordion .site-header-wrap {
+  margin-bottom: 60px;
+}
+section.accord #accordion a.accordion-section-title,
+section.accord #accordion .accordion-section-title {
+  text-align: center;
+  font-weight: 600;
+  width: 100%;
+  padding: 15px;
+  display: inline-block;
+  transition: height linear 0.15s;
+  font-size: 18px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #433b30;
+  font-size: 1.1em;
+  background-color: #f6f6f6;
+  border: 1px solid #dcdcdc;
+}
+@media (max-width: 64em) {
+  section.accord #accordion a.accordion-section-title,
+  section.accord #accordion .accordion-section-title {
+    background-color: #e2e2e2;
+    background: url("/wp-content/themes/witmer/assets/images/arrow-down.png") right center no-repeat;
+  }
+  section.accord #accordion a.accordion-section-title.active,
+  section.accord #accordion .accordion-section-title.active {
+    background: url("/wp-content/themes/witmer/assets/images/arrow-up.png") right center no-repeat !important;
+  }
+}
+section.accord #accordion a.accordion-section-title:hover,
+section.accord #accordion .accordion-section-title:hover {
+  text-decoration: none;
+  color: #992932;
+  background-color: #e2e2e2;
+  background-image: url("/wp-content/themes/witmer/assets/images/arrow-down.png");
+  background-position: right center;
+  background-repeat: no-repeat;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+section.accord #accordion a.accordion-section-title.active,
+section.accord #accordion .accordion-section-title.active {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+section.accord #accordion .accordion-section:first-of-type .accordion-section-title {
+  border-top: 1px solid #e1d6c0;
+}
+section.accord #accordion .accordion-section-content {
+  padding: 0;
+  display: none;
+}
+section.accord #accordion .accordion-section-content .img {
+  height: auto;
+  width: 50%;
+  float: left;
+}
+@media (max-width: 64em) {
+  section.accord #accordion .accordion-section-content .img {
+    width: 100%;
+    max-width: none;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+section.accord #accordion .accordion-section-content .intro {
+  width: 100%;
+  padding: 5%;
+}
+section.accord #accordion .accordion-section-content a {
+  color: #000;
+  text-decoration: underline;
+}
+section.accord #accordion .accordion-section-content a:hover {
+  color: red;
+  text-decoration: none;
+}
+section.accord #accordion p.description {
+  margin-bottom: 20px;
 }
 
 /*# sourceMappingURL=style-human.css.map */

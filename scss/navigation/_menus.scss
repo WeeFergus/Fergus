@@ -5,11 +5,11 @@
 	right: 25px;
 	top: 75px;
 	cursor: pointer;
-	width: 70px;
-    height: 70px;
+	width: $size__burger-bkgnd;
+    height: $size__burger-bkgnd;
     display: flex;
     align-items: center;
-	background: $dkblue;
+	background: $color__burger-bkgnd;
 	
 	span,
 	span:before,
@@ -54,12 +54,10 @@
 		}
 	}
 	
-	@media screen and (min-width: 768px) {
+	@include min-nav-breakpoint {
 		display: none;
 	}
 }
-
-
 
 .main-navigation {
 	clear: both;
@@ -73,7 +71,7 @@
 		margin: 0;
 		padding-left: 0;
 		
-		@media screen and (max-width: 768px) {
+		@include max-nav-breakpoint {
 			background: $blue;
 		}
 
@@ -84,9 +82,9 @@
 			top: 100%;
 			left: -999em;
 			z-index: 99999;
-			background: #bada55;
+			background: $color__submenu_bkgnd;
 			
-			@media screen and (max-width: 768px) {
+			@include max-nav-breakpoint {
 				width: 100%;
 			}
 			
@@ -104,8 +102,9 @@
 			}
 
 			a {
+				color: $color__nav-font;
 				width: 200px;
-				@media screen and (max-width: 768px) {
+				@include max-nav-breakpoint {
 					width: 100%;
 				}
 			}
@@ -136,8 +135,8 @@
 	a {
 		display: block;
 		text-decoration: none;
-		color: #fff;
-		@media screen and (max-width: 768px) {
+		color: $color__nav-font;
+		@include max-nav-breakpoint {
 			padding: 10px 0 10px 15px;
 		}
 		&:hover {
@@ -152,17 +151,12 @@
 	}
 }
 
-
- 
-
-	
-
 .main-navigation.toggled ul {
 	display: flex;
 	flex-direction: column;
 }
 
-@media screen and (min-width: 768px) {
+	@include min-nav-breakpoint {
 	.menu-toggle {
 		display: none;
 	}
@@ -174,7 +168,7 @@
 			padding: 0;
 			
 			a {
-				color: #fff;
+				color: $color__nav-font;
 				text-decoration: none;
 				padding: 15px 25px;
 				

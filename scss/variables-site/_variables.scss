@@ -24,7 +24,6 @@ $color__border-button-focus: #aaa #bbb #bbb;
 $color__border-input: #ccc;
 $color__border-abbr: #666;
 
-
 //Typography
 $font__main: 'Nanum Gothic', sans-serif;
 $font__sans: 'Nanum Gothic', sans-serif;
@@ -34,15 +33,13 @@ $font__pre: "Courier 10 Pitch", Courier, monospace;
 $font__line-height-body: 1.5;
 $font__line-height-pre: 1.6;
 
-
 //Structure
 $size__site-main: 100%;
 $size__site-sidebar: 25%;
 
-
-
 //Breakpoints
-// Make sure the mobile breakpoint matches the style override in js/burgertime.js
+$nav-breakpoint: 37.5em; //This number MUST match the breakpoint on line 29 in js/burgertime.js
+
 $desktop: 87.5em; //1400px
 $laptop:  75em; //1200px
 $tabletH: 64em; //1024px
@@ -50,11 +47,9 @@ $tabletV: 48em; //768px
 $mobileH: 37.5em; //600px
 $mobileV: 25em; //400px
 
-
-
 //Media Queries
 $desktop-width: $desktop;
-$laptop-width: $laptop;
+$laptop-width:  $laptop;
 $tabletH-width: $tabletH;
 $tabletV-width: $tabletV;
 $mobileH-width: $mobileH;
@@ -80,16 +75,8 @@ $columns__margin: 3.8%;
 $color__burger: #fff;
 $color__burger-bkgnd: $blue;
 $size__burger-bkgnd: 70px;
-$color__nav-font: #ffffff;
+$color__nav-font: #fff;
 $color__link-bkgnd-hover: $dkblue;
-$color__submenu_bkgnd: $blue;
+$color__submenu_bkgnd: #bada55;
 $color__top_level_menu_bkgnd: $blue;
-
-
-
-//Flex Grid Demo 
-$demoMain: rgba(51, 153, 204,.2);
-$demoMainDark: rgba(51, 153, 204,.6);
-$demoBorder: #33cccc;
-$demoHolly: rgba(102, 51, 255, 0.1);
-$demoHollyDark: rgba(102, 51, 255, 0.25);
+ 
