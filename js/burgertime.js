@@ -24,7 +24,9 @@
     jQuery(window).resize(function(){
     if (jQuery(window).width() >= 768) {  //This breakpoint MUST match the mobile breakpoint
 		jQuery('nav#site-navigation ul').removeAttr('style');
+		jQuery('#nav-toggle').removeClass("active");
      	}
 	});
+
   }); // end DOM ready
 })(jQuery); // end jQuery
