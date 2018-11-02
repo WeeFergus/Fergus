@@ -19,31 +19,6 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
-/*--------------------------------------------------------------
->>> TABLE OF CONTENTS:
-----------------------------------------------------------------
-# Normalize
-# Typography
-# Elements
-# Forms
-# Navigation
-	## Links
-	## Menus
-# Accessibility
-# Alignments
-# Clearings
-# Widgets
-# Content
-	## Posts and pages
-	## Comments
-# Infinite scroll
-# Media
-	## Captions
-	## Galleries
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-# Normalize
---------------------------------------------------------------*/
 /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
 	 ========================================================================== */
@@ -376,9 +351,6 @@ template {
   display: none;
 }
 
-/*--------------------------------------------------------------
-# Typography
---------------------------------------------------------------*/
 body,
 button,
 input,
@@ -444,9 +416,6 @@ big {
   font-size: 125%;
 }
 
-/*--------------------------------------------------------------
-# Elements
---------------------------------------------------------------*/
 html {
   box-sizing: border-box;
 }
@@ -513,9 +482,6 @@ table {
   width: 100%;
 }
 
-/*--------------------------------------------------------------
-# Forms
---------------------------------------------------------------*/
 button,
 input[type="button"],
 input[type="reset"],
@@ -594,9 +560,6 @@ textarea {
   width: 100%;
 }
 
-/*--------------------------------------------------------------
-# Navigation
---------------------------------------------------------------*/
 /*--------------------------------------------------------------
 ## Links
 --------------------------------------------------------------*/
@@ -783,9 +746,6 @@ a:hover, a:active {
   width: 50%;
 }
 
-/*--------------------------------------------------------------
-# Accessibility
---------------------------------------------------------------*/
 /* Text meant only for screen readers. */
 .screen-reader-text {
   border: 0;
@@ -827,9 +787,6 @@ a:hover, a:active {
   outline: 0;
 }
 
-/*--------------------------------------------------------------
-# Alignments
---------------------------------------------------------------*/
 .alignleft {
   display: inline;
   float: left;
@@ -849,9 +806,6 @@ a:hover, a:active {
   margin-right: auto;
 }
 
-/*--------------------------------------------------------------
-# Clearings
---------------------------------------------------------------*/
 .clear:before,
 .clear:after,
 .entry-content:before,
@@ -878,9 +832,6 @@ a:hover, a:active {
   clear: both;
 }
 
-/*--------------------------------------------------------------
-# Widgets
---------------------------------------------------------------*/
 .widget {
   margin: 0 0 1.5em;
   /* Make sure select elements fit in widgets. */
@@ -889,9 +840,6 @@ a:hover, a:active {
   max-width: 100%;
 }
 
-/*--------------------------------------------------------------
-# Content
---------------------------------------------------------------*/
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
@@ -929,9 +877,6 @@ a:hover, a:active {
   display: block;
 }
 
-/*--------------------------------------------------------------
-# Infinite scroll
---------------------------------------------------------------*/
 /* Globally hidden elements when Infinite Scroll is supported and in use. */
 .infinite-scroll .posts-navigation,
 .infinite-scroll.neverending .site-footer {
@@ -944,9 +889,6 @@ a:hover, a:active {
   display: block;
 }
 
-/*--------------------------------------------------------------
-# Media
---------------------------------------------------------------*/
 .page-content .wp-smiley,
 .entry-content .wp-smiley,
 .comment-content .wp-smiley {
@@ -1135,40 +1077,38 @@ section.accord #accordion .accordion .site-header-wrap {
 }
 section.accord #accordion a.accordion-section-title,
 section.accord #accordion .accordion-section-title {
-  text-align: center;
-  font-weight: 600;
+  text-align: left;
+  font-weight: 400;
   width: 100%;
   padding: 15px;
   display: inline-block;
   transition: height linear 0.15s;
-  font-size: 18px;
+  font-size: 1em;
   text-transform: uppercase;
   text-decoration: none;
   color: #433b30;
-  font-size: 1.1em;
-  background-color: #f6f6f6;
-  border: 1px solid #dcdcdc;
 }
-@media (max-width: 64em) {
-  section.accord #accordion a.accordion-section-title,
-  section.accord #accordion .accordion-section-title {
-    background-color: #e2e2e2;
-    background: url("/wp-content/themes/witmer/assets/images/arrow-down.png") right center no-repeat;
-  }
-  section.accord #accordion a.accordion-section-title.active,
-  section.accord #accordion .accordion-section-title.active {
-    background: url("/wp-content/themes/witmer/assets/images/arrow-up.png") right center no-repeat !important;
-  }
+section.accord #accordion a.accordion-section-title:before,
+section.accord #accordion .accordion-section-title:before {
+  display: inline-block;
+  content: '';
+  background: url("/wp-content/themes/fergus/images/arrow-down.png") left center no-repeat;
+  height: 16px;
+  margin-top: 5px;
+  transition: all .3s ease-in-out;
+  flex: 0 0 100px;
+  width: 16px;
+  margin-right: 14px;
+}
+section.accord #accordion a.accordion-section-title.active:before,
+section.accord #accordion .accordion-section-title.active:before {
+  transform: rotate(180deg);
 }
 section.accord #accordion a.accordion-section-title:hover,
 section.accord #accordion .accordion-section-title:hover {
   text-decoration: none;
-  color: #992932;
-  background-color: #e2e2e2;
-  background-image: url("/wp-content/themes/witmer/assets/images/arrow-down.png");
-  background-position: right center;
-  background-repeat: no-repeat;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  color: #135689;
+  background-color: #f2f2f2;
 }
 section.accord #accordion a.accordion-section-title.active,
 section.accord #accordion .accordion-section-title.active {
@@ -1178,7 +1118,7 @@ section.accord #accordion .accordion-section:first-of-type .accordion-section-ti
   border-top: 1px solid #e1d6c0;
 }
 section.accord #accordion .accordion-section-content {
-  padding: 0;
+  padding: 0 4%;
   display: none;
 }
 section.accord #accordion .accordion-section-content .img {
